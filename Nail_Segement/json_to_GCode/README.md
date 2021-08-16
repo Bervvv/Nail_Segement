@@ -17,5 +17,5 @@
 args = r'PATH'
 ```
 
-##后记
+## 后记
 在**transform**方法中更改**factor**即可改变输出的x，y比值。
