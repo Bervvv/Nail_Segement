@@ -1,0 +1,5 @@
+JPEGImages/nail498.png Annotations/nail498.png
+JPEGImages/nail499.png Annotations/nail499.png
+JPEGImages/nail500.png Annotations/nail500.png
+JPEGImages/nail501.png Annotations/nail501.png
+JPEGImages/nail502.png Annotations/nail502.png
