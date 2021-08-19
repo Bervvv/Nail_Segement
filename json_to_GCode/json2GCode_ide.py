@@ -27,16 +27,19 @@ def create_output_file(output_dir, label_file):
 
 def transform(width, output):
     content = 'G90\nG1Z3F200\nM03 S1000\n'
+    # ***change factor below to adjust image total size***
+    factor = 1
+    # ***change factor above to adjust image total size***
     for key, value in output['polygon'].items():
-        # ***change factor below to aujst image total size***
-        factor = 1
-        # ***change factor above to aujst image total size***
         value *= factor
         if 'x' in key:
+            if 'x1' == key: first = 'G01 X' + str(value)
             content += 'G01 X' + str(value)
         elif 'y' in key:
             value = adjust_width(width, value)
+            if 'y1' == key: first += ' Y' + str(value) + '\n'
             content += ' Y' + str(value) + '\n'
+    if first: content += first
     content += 'M05\nM02'
     return content
 
